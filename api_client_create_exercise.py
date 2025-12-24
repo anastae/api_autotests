@@ -1,24 +1,18 @@
 from api_client_create_course import create_course_request
 from clients.authentication.authentication_client import AuthenticationClient
+from clients.exercises.exercises_client import get_exercises_client
 from clients.exercises.exercises_schema import CreateExerciseRequestSchema
 from clients.private_http_builder import AuthenticationUserSchema
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema
 from clients.files.files_client import get_files_client, FilesClient
 from clients.courses.courses_client import get_courses_client
-from clients.exercises.exercises_client import get_exercises_client
-import clients.exercises.exercises_schema
-from tools.fakers import get_random_email
+
+
 
 public_users_client = get_public_users_client()
 # Создаем пользователя
-create_user_request = CreateUserRequestSchema(
-    email=get_random_email(),
-    password="string",
-    last_name="string",
-    first_name="string",
-    middle_name="string"
-)
+create_user_request = CreateUserRequestSchema()
 create_user_response = public_users_client.create_user(create_user_request)
 #clients
 authentication_user =  AuthenticationUserSchema(
@@ -48,12 +42,6 @@ exercises_client = get_exercises_client(authentication_user)
 # print('Create course data:', create_course_response)
 
 #create exercise
-create_exercise_request = CreateExerciseRequestSchema(title='my exercise',
-    courseId='af7649ef968c4431bb830a5ad110c283',
-    maxScore=962,
-    minScore=4,
-    orderIndex=10,
-    description='oh my exercise',
-    estimatedTime='1 hour')
+create_exercise_request = CreateExerciseRequestSchema()
 create_exercise_response = exercises_client.create_exercise(create_exercise_request)
 print('Create exercise data:', create_exercise_response)
