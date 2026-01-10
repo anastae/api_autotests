@@ -37,8 +37,6 @@ def test_get_user_me(private_users_client, function_user):
     response = private_users_client.get_user_me_api()
     # Валидируем тело ответа и проверяем на соответствие запросу по созданию пользователя
     response_data = GetUserResponseSchema.model_validate_json(response.text)
-    print('1:', function_user.response)
-    print('2:', response)
     assert_status_code(response.status_code, HTTPStatus.OK)
     assert_get_user_response(response_data, function_user.response)
     validate_json_schema(response.json(), response_data.model_json_schema())
