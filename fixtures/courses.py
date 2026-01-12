@@ -12,7 +12,7 @@ class CourseFixture(BaseModel):
 #создает клиент CoursesClient, который используется для взаимодействия с API курсов
 @pytest.fixture
 def courses_client(function_user: UserFixture) -> CoursesClient:
-    return get_courses_client(function_user.authentication_user)
+    return get_courses_client(function_user.authentication_user())
 
 #создает тестовый курс перед выполнением теста и возвращает объект с данными созданного курса.
 @pytest.fixture

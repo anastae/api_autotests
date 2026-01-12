@@ -13,7 +13,7 @@ class ExerciseFixture(BaseModel):
 #создает клиент ExercisesClient, который используется для взаимодействия с API упражнений
 @pytest.fixture
 def exercises_client(function_user: UserFixture) -> ExercisesClient:
-    return get_exercises_client(function_user.authentication_user)
+    return get_exercises_client(function_user.authentication_user())
 
 #создает тестовое упражнение перед выполнением теста и возвращает объект с данными созданного упражнения.
 @pytest.fixture

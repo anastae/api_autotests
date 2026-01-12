@@ -14,7 +14,7 @@ class FileFixture(BaseModel):
 @pytest.fixture
 def files_client(function_user: UserFixture) -> FilesClient:
     # cоздает клиент, уже настроенный для работы от имени данного пользователя.
-    return get_files_client(function_user.authentication_user)
+    return get_files_client(function_user.authentication_user())
 
 # автоматически создает тестовый файл перед каждым тестом и возвращает информацию о нем
 @pytest.fixture
