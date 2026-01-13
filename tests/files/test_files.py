@@ -9,7 +9,8 @@ from fixtures.files import FileFixture
 from tools.assertions.base import assert_status_code
 from tools.assertions.files import (assert_create_file_response, assert_file_is_accessible,
                                     assert_get_file_response, assert_create_file_with_empty_filename_response,
-                                    assert_create_file_with_empty_directory_response, assert_file_not_found_response)
+                                    assert_create_file_with_empty_directory_response, assert_file_not_found_response,
+                                    assert_get_file_with_incorrect_file_id_response)
 from tools.assertions.schema import validate_json_schema
 
 
@@ -32,6 +33,19 @@ class TestFiles:
 
         assert_status_code(response.status_code, HTTPStatus.OK)
         assert_get_file_response(response_data, function_file.response)
+
+    def test_delete_file(self, files_client: FilesClient, function_file: FileFixture):
+        delete_response = files_client.delete_file_api(function_file.response.file.id)
+        assert_status_code(delete_response.status_code, HTTPStatus.OK)
+
+            #Пытаемся получить удаленный файл
+        get_response = files_client.get_file_api(function_file.response.file.id)
+        get_response_data = InternalErrorResponseSchema.model_validate_json(get_response.text)
+        #ожидаем 404
+        assert_status_code(get_response.status_code, HTTPStatus.NOT_FOUND)
+        #Проверяем, что в ответе содержится ошибка "File not found"
+        assert_file_not_found_response(get_response_data)
+        validate_json_schema(get_response.json(), get_response_data.model_json_schema())
 
     @pytest.mark.negative
     def test_create_file_with_empty_filename(self, files_client: FilesClient):
@@ -62,15 +76,11 @@ class TestFiles:
         assert_create_file_with_empty_directory_response(response_data)
         validate_json_schema(response.json(), response_data.model_json_schema())
 
-    def test_delete_file(self, files_client: FilesClient, function_file: FileFixture):
-        delete_response = files_client.delete_file_api(function_file.response.file.id)
-        assert_status_code(delete_response.status_code, HTTPStatus.OK)
-
-            #Пытаемся получить удаленный файл
-        get_response = files_client.get_file_api(function_file.response.file.id)
-        get_response_data = InternalErrorResponseSchema.model_validate_json(get_response.text)
-        #ожидаем 404
-        assert_status_code(get_response.status_code, HTTPStatus.NOT_FOUND)
-        #Проверяем, что в ответе содержится ошибка "File not found"
-        assert_file_not_found_response(get_response_data)
-        validate_json_schema(get_response.json(), get_response_data.model_json_schema())
+    @pytest.mark.negative
+    def test_get_file_with_incorrect_file_id(self, files_client: FilesClient):
+        response = files_client.get_file_api(file_id="incorrect-file-id")
+        response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
+        #ожидаем 422
+        assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
+        assert_get_file_with_incorrect_file_id_response(response_data)
+        validate_json_schema(response.json(), response_data.model_json_schema())
