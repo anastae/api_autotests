@@ -13,12 +13,18 @@ class ExerciseSchema(BaseModel):
     description: str
     estimated_time: str=Field(alias="estimatedTime")
 
+class GetExerciseResponseSchema(BaseModel):
+    exercise: ExerciseSchema
+
 class GetExercisesQuerySchema(BaseModel):
     """
         Описание структуры запроса на получение списка упражнений.
         """
     model_config = ConfigDict(populate_by_name=True)
     course_id: str=Field(alias="courseId")
+
+class GetExercisesResponseSchema(BaseModel):
+    exercises: list[ExerciseSchema]
 
 class CreateExerciseRequestSchema(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
@@ -44,5 +50,3 @@ class UpdateExerciseRequestSchema(BaseModel):
     description: str | None = Field(default_factory=fake.text)
     estimated_time: str | None = Field(alias="estimatedTime", default_factory=fake.estimated_time)
 
-class GetExercisesResponseSchema(BaseModel):
-    exercises: list[ExerciseSchema]
