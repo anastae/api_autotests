@@ -1,5 +1,6 @@
 from http import HTTPStatus
 import pytest
+import allure
 
 from clients.courses.courses_client import CoursesClient
 from clients.courses.courses_schema import (UpdateCourseRequestSchema,
@@ -14,11 +15,14 @@ from tools.assertions.courses import (assert_update_course_response,
                                       assert_get_courses_response,
                                       assert_create_course_response)
 from tools.assertions.schema import validate_json_schema
-
+from tools.allure.tags import AllureTag
 
 @pytest.mark.courses
 @pytest.mark.regression
+@allure.tag(AllureTag.COURSES, AllureTag.REGRESSION)
 class TestCourses:
+    @allure.title('Create new course')
+    @allure.tag(AllureTag.CREATE_ENTITY)
     def test_create_course(self,
                            courses_client: CoursesClient,
                            function_user: UserFixture,
@@ -32,6 +36,8 @@ class TestCourses:
         assert_create_course_response(request, response_data)
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.title('Get list of courses')
+    @allure.tag(AllureTag.GET_ENTITIES)
     def test_get_courses(self,
                          courses_client: CoursesClient,
                          function_user: UserFixture,
@@ -46,6 +52,8 @@ class TestCourses:
         assert_get_courses_response(response_data, [function_course.response])
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.title('Update course')
+    @allure.tag(AllureTag.UPDATE_ENTITY)
     def test_update_course(self, courses_client: CoursesClient, function_course: CourseFixture):
         # Формируем данные для обновления
         request = UpdateCourseRequestSchema()

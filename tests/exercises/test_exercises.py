@@ -1,5 +1,6 @@
 from http import HTTPStatus
 import pytest
+import allure
 
 from clients.errors_schema import InternalErrorResponseSchema
 from clients.exercises.exercises_client import ExercisesClient
@@ -12,11 +13,14 @@ from tools.assertions.base import assert_status_code, assert_equal
 from tools.assertions.exercises import assert_create_exercise_response, assert_get_exercise_by_id_response, \
     assert_update_exercise_response, assert_exercise_not_found, assert_get_exercises_response
 from tools.assertions.schema import validate_json_schema
-
+from tools.allure.tags import AllureTag
 
 @pytest.mark.exercises
 @pytest.mark.regression
+@allure.tag(AllureTag.EXERCISES, AllureTag.REGRESSION)
 class TestExercises:
+    @allure.title('Create new exercise')
+    @allure.tag(AllureTag.CREATE_ENTITY)
     def test_create_exercise(self,
                              exercises_client: ExercisesClient,
                              function_course: CourseFixture):
@@ -28,6 +32,8 @@ class TestExercises:
         assert_create_exercise_response(request, response_data)
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.title('Get exercise by id')
+    @allure.tag(AllureTag.GET_ENTITY)
     def test_get_exercise_by_id(self,
                           exercises_client: ExercisesClient,
                           function_exercise: ExerciseFixture):
@@ -38,6 +44,8 @@ class TestExercises:
         assert_get_exercise_by_id_response(response_data, function_exercise.response)
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.title('Update exercise')
+    @allure.tag(AllureTag.UPDATE_ENTITY)
     def test_update_exercise(self,
                              exercises_client: ExercisesClient,
                              function_exercise: ExerciseFixture):
@@ -51,6 +59,8 @@ class TestExercises:
         assert_equal(response_data.exercise.course_id, function_exercise.response.exercise.course_id, 'course id')
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.title('Delete exercise')
+    @allure.tag(AllureTag.DELETE_ENTITY)
     def test_delete_exercise(self,
                              exercises_client: ExercisesClient,
                              function_exercise: ExerciseFixture):
@@ -65,6 +75,8 @@ class TestExercises:
         assert_exercise_not_found(get_response_data)
         validate_json_schema(get_response.json(), get_response_data.model_json_schema())
 
+    @allure.title('Get list of exercises')
+    @allure.tag(AllureTag.GET_ENTITIES)
     def test_get_exercises(self,
                            exercises_client: ExercisesClient,
                            function_course: CourseFixture,
