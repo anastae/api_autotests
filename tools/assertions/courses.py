@@ -28,8 +28,8 @@ def assert_course(actual: CourseSchema, expected: CourseSchema):
 def assert_create_course_response(request: CreateCourseRequestSchema, response: CreateCourseResponseSchema):
     """
     Проверяет, что ответ на создание курса соответствует запросу
-    :param request: Исходный запрос на создание файла.
-    :param response: Ответ API с данными файла.
+    :param request: Исходный запрос на создание курса.
+    :param response: Ответ API с данными курса.
     :raises AssertionError: Если хотя бы одно поле не совпадает.
     """
     assert_equal(response.course.title, request.title, "title")
