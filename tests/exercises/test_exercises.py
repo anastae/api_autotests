@@ -1,13 +1,12 @@
 from http import HTTPStatus
 import pytest
 
-
 from clients.exercises.exercises_client import ExercisesClient
 from clients.exercises.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema, \
     GetExerciseResponseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 from fixtures.courses import CourseFixture
 from fixtures.exercises import ExerciseFixture
-from tools.assertions.base import assert_status_code
+from tools.assertions.base import assert_status_code, assert_equal
 from tools.assertions.exercises import assert_create_exercise_response, assert_get_exercise_by_id_response, \
     assert_update_exercise_response
 from tools.assertions.schema import validate_json_schema
@@ -47,5 +46,6 @@ class TestExercises:
 
         assert_status_code(response.status_code, HTTPStatus.OK)
         assert_update_exercise_response(request, response_data.exercise)
+        assert_equal(response_data.exercise.course_id, function_exercise.response.exercise.course_id, 'course id')
         validate_json_schema(response.json(), response_data.model_json_schema())
 
