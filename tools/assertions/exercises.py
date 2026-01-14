@@ -1,5 +1,5 @@
 from clients.exercises.exercises_schema import ExerciseSchema, CreateExerciseRequestSchema, \
-    CreateExerciseResponseSchema, GetExerciseResponseSchema
+    CreateExerciseResponseSchema, GetExerciseResponseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 from tools.assertions.base import assert_equal
 
 
@@ -45,3 +45,12 @@ def assert_get_exercise_by_id_response(get_exercise_response: GetExerciseRespons
             :raises AssertionError: Если данные файла не совпадают.
             """
     assert_exercise(get_exercise_response.exercise, create_exercise_response.exercise)
+
+def assert_update_exercise_response(request: UpdateExerciseRequestSchema,
+                                    response: UpdateExerciseResponseSchema):
+    assert_equal(request.title, response.title, "title")
+    assert_equal(request.max_score, response.max_score, "max_score")
+    assert_equal(request.min_score, response.min_score, "min_score")
+    assert_equal(request.order_index, response.order_index, "order_index")
+    assert_equal(request.description, response.description, "description")
+    assert_equal(request.estimated_time, response.estimated_time, "estimated_time")
