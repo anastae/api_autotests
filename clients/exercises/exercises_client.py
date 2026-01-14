@@ -8,10 +8,9 @@ class ExercisesClient(ApiClient):
     def get_exercises_api(self, query: GetExercisesQuerySchema) -> Response:
         """
                Метод получения списка всех упражнений.
-               :param query: Словарь с courseId.
                :return: Ответ от сервера в виде объекта httpx.Response
                """
-        return self.get('/api/v1/exercises', params=query.model_dump(by_alias=True))
+        return self.get('/api/v1/exercises', params=query.model_dump(by_alias=True)) #сериализация
 
     def get_exercises(self, query: GetExercisesQuerySchema) -> GetExercisesResponseSchema:
         response = self.get_exercises_api(query)
