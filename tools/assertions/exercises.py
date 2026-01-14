@@ -67,7 +67,6 @@ def assert_get_exercises_response(get_exercises_response: GetExercisesResponseSc
                                   create_exercises_response: list[CreateExerciseResponseSchema]):
     """
        Проверяет, что ответ на получение списка упражнений соответствует ответам на их создание.
-
        :param get_exercises_response: Ответ API при запросе списка упражнений.
        :param create_exercises_response: Список API ответов при создании упражнений.
        :raises AssertionError: Если данные курсов не совпадают.
