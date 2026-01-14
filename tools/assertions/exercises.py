@@ -44,4 +44,4 @@ def assert_get_exercise_by_id_response(get_exercise_response: GetExerciseRespons
             :param create_exercise_response: Ответ API при создании упражнения.
             :raises AssertionError: Если данные файла не совпадают.
             """
-    assert_equal(get_exercise_response.exercise, create_exercise_response.exercise, "exercise")
+    assert_exercise(get_exercise_response.exercise, create_exercise_response.exercise)
