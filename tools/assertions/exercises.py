@@ -5,7 +5,9 @@ from clients.exercises.exercises_schema import ExerciseSchema, CreateExerciseReq
     GetExercisesResponseSchema
 from tools.assertions.base import assert_equal, assert_length
 from tools.assertions.errors import assert_internal_error_response
+from tools.logger import get_logger
 
+logger = get_logger("EXERCISES_ASSERTIONS")
 
 def assert_exercise(actual: ExerciseSchema, expected: ExerciseSchema):
     """
@@ -15,6 +17,7 @@ def assert_exercise(actual: ExerciseSchema, expected: ExerciseSchema):
        :param expected: Ожидаемые данные курса.
        :raises AssertionError: Если хотя бы одно поле не совпадает.
        """
+    logger.info("Check exercise")
     assert_equal(actual.id, expected.id, "id")
     assert_equal(actual.title, expected.title, "title")
     assert_equal(actual.course_id, expected.course_id, "course_id")
@@ -31,6 +34,7 @@ def assert_create_exercise_response(request: CreateExerciseRequestSchema, respon
        :param response: Ответ API с данными упражнения.
        :raises AssertionError: Если хотя бы одно поле не совпадает.
        """
+    logger.info("Assert create exercise response")
     assert_equal(response.exercise.title, request.title, "title")
     assert_equal(response.exercise.course_id, request.course_id, "course_id")
     assert_equal(response.exercise.max_score, request.max_score, "max_score")
@@ -48,10 +52,12 @@ def assert_get_exercise_by_id_response(get_exercise_response: GetExerciseRespons
             :param create_exercise_response: Ответ API при создании упражнения.
             :raises AssertionError: Если данные файла не совпадают.
             """
+    logger.info("Assert get exercise by id response")
     assert_exercise(get_exercise_response.exercise, create_exercise_response.exercise)
 
 def assert_update_exercise_response(request: UpdateExerciseRequestSchema,
                                     response: UpdateExerciseResponseSchema):
+    logger.debug("Assert update exercise response")
     assert_equal(request.title, response.title, "title")
     assert_equal(request.max_score, response.max_score, "max_score")
     assert_equal(request.min_score, response.min_score, "min_score")
@@ -60,6 +66,7 @@ def assert_update_exercise_response(request: UpdateExerciseRequestSchema,
     assert_equal(request.estimated_time, response.estimated_time, "estimated_time")
 
 def assert_exercise_not_found(actual: InternalErrorResponseSchema):
+    logger.info("Assert exercise not found response")
     expected = InternalErrorResponseSchema(details="Exercise not found")
     assert_internal_error_response(actual, expected)
 
@@ -71,6 +78,7 @@ def assert_get_exercises_response(get_exercises_response: GetExercisesResponseSc
        :param create_exercises_response: Список API ответов при создании упражнений.
        :raises AssertionError: Если данные курсов не совпадают.
        """
+    logger.info("Assert get list of exercises response")
     assert_length(get_exercises_response.exercises, create_exercises_response, "exercises")
     for index, create_exercises_response in enumerate(create_exercises_response):
         assert_exercise(get_exercises_response.exercises[index], create_exercises_response.exercise)
