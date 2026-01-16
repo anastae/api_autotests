@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA4OjA5OjE2LjA4MTE1OCIsInVzZXJfaWQiOiI1NjY3ZWJmZC1iNWJkLTRmYzgtOWJjNS0wZjM4MDhiYzVhMzUifQ.rHJP_P5eppxpuOjAknK0_KSurgW8Dztl2MB_rf9fgSc' \
+  -H 'content-length: 348' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Career dinner as out.","maxScore":51,"minScore":5,"description":"Teacher receive lose often street rest view. Clear herself large stay whether. Only happy send project chair. Think several art down.","estimatedTime":"3 weeks","previewFileId":"aa41251f-cb18-4054-a17f-4a5499badb4a","createdByUserId":"5667ebfd-b5bd-4fc8-9bc5-0f3808bc5a35"}'

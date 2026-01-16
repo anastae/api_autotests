@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA4OjA5OjEzLjYzNzEyNyIsInVzZXJfaWQiOiJjOWJmYjZkZS04NGQyLTQ5NmQtYjQwNy04MDlhY2VjZmMzNzkifQ.0vcWVSSnYJlokVrZWM2CrkT3-Sqbt2Sb_34PUA-zVo4' \
+  -H 'content-length: 386' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Group effect water prepare fund.","maxScore":75,"minScore":19,"description":"Page southern world evidence. Sense board daughter cost hear. Recent among walk sea.\nOld page notice wife bank trial husband those. Create our just movie put.","estimatedTime":"6 weeks","previewFileId":"cb1fe810-eaa6-4128-943b-5de51eea0077","createdByUserId":"c9bfb6de-84d2-496d-b407-809acecfc379"}'

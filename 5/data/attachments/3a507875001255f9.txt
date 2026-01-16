@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA4OjA5OjE0LjIyNTkyMSIsInVzZXJfaWQiOiI1MTJkNDkwMS1hZjEwLTQ2MjYtYjg3ZS1hYTU5ZjhiM2Q2ZTMifQ.AufNbJOV8JIE0niDv71eUxR0p5u08a_COMTS1R1MHns' \
+  -H 'content-length: 365' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Strong want want wait yourself turn.","maxScore":71,"minScore":19,"description":"Lawyer one notice range board method anyone everything. Wall particular way account guy. Goal rich with wall character week job eight.","estimatedTime":"1 weeks","previewFileId":"5bb117dd-b890-421d-926d-a1913acbf7ca","createdByUserId":"512d4901-af10-4626-b87e-aa59f8b3d6e3"}'

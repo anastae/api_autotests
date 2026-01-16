@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA4OjA5OjEzLjA1MTI5MiIsInVzZXJfaWQiOiIxY2VlYzZhOS03NTQyLTQzN2YtYmIwMy03NWFhMjJiNjA3ZjYifQ.H3-hXWN4bz9Iyl_Ucmw3qQMAbuMObf9qHh_PWaGmZCk' \
+  -H 'content-length: 411' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Admit laugh media return sense media debate.","maxScore":100,"minScore":3,"description":"Help paper consider real hand. Over second either idea financial process dream anything.\nMind prepare recognize billion beat head blue argue. Early take movement improve.","estimatedTime":"10 weeks","previewFileId":"2ade5393-fb4e-4b0e-b79b-6434f9abdadb","createdByUserId":"1ceec6a9-7542-437f-bb03-75aa22b607f6"}'

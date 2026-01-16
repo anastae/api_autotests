@@ -1,0 +1,24 @@
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:29 Make PATCH request to http://localhost:8000/api/v1/exercises/fa81c9de-e16c-44e6-83d9-b99c36dee886
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/exercises/fa81c9de-e16c-44e6-83d9-b99c36dee886
+INFO     BASE_ASSERTIONS:base.py:14 Check that response status code equals to 200
+DEBUG    EXERCISES_ASSERTIONS:exercises.py:60 Assert update exercise response
+INFO     BASE_ASSERTIONS:base.py:30 Check that "title" equals to Than public claim leave central consumer fast.
+INFO     BASE_ASSERTIONS:base.py:30 Check that "max_score" equals to 88
+INFO     BASE_ASSERTIONS:base.py:30 Check that "min_score" equals to 9
+INFO     BASE_ASSERTIONS:base.py:30 Check that "order_index" equals to 38
+INFO     BASE_ASSERTIONS:base.py:30 Check that "description" equals to Course worker interesting. Course example policy western none capital.
+Media decade her civil write. Theory rise man or.
+Impact against ready financial risk citizen.
+INFO     BASE_ASSERTIONS:base.py:30 Check that "estimated_time" equals to 2 weeks
+INFO     BASE_ASSERTIONS:base.py:30 Check that "course id" equals to 7f249817-8368-4579-b28e-4eb29b8f68c1
+INFO     SCHEMA_ASSERTIONS:schema.py:20 Validating JSON schema

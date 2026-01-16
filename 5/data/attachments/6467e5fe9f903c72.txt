@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA4OjA5OjE1LjQ1NDg1MiIsInVzZXJfaWQiOiI1OTM2MjAyNy0yNWE4LTRiNGUtOWRjYi1kYjQxNWIyM2MwNjQifQ.ipdEZKyJBEXQuoHebh5sOn_7Gwjxbvp7UaCPTiqQoPk' \
+  -H 'content-length: 372' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Use issue five table most.","maxScore":57,"minScore":8,"description":"Few international song several along baby. Key skill church section foot. Notice officer consumer Republican. Quickly no tell later memory black course.","estimatedTime":"5 weeks","previewFileId":"9e871a9b-83ef-4300-9fdb-267d57d58a52","createdByUserId":"59362027-25a8-4b4e-9dcb-db415b23c064"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA4OjA5OjE0Ljg2NDUwNCIsInVzZXJfaWQiOiJjOGZlZjRiYi03NmFhLTRkZGUtYmUxNi1iMmY0MTMxM2IwMGQifQ.d5YWtKzrCr6zjcPCmlOLgW7O3GePoQSR95D6S4VSahk' \
+  -H 'content-length: 366' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Close know president matter wonder space peace.","maxScore":54,"minScore":14,"description":"Help rule these bed. About with realize reflect after. Bar city side keep. Beautiful modern back example program hear store.","estimatedTime":"2 weeks","previewFileId":"9bd1d87e-a452-4732-af86-35c48d6c8626","createdByUserId":"c8fef4bb-76aa-4dde-be16-b2f41313b00d"}'

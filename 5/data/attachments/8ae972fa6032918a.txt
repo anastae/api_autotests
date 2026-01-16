@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA4OjA5OjEyLjE1NjM3MiIsInVzZXJfaWQiOiJlNjU4NzA4Yy0zNGI3LTQxMzItOWYxYi0xNDY4NjI2N2ZiMDkifQ.fpl5TbSYTj6FInWEsiSIQEeHsh-CnywcFp8j2ow9HkA' \
+  -H 'content-length: 384' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ever send certain pick rich gun.","maxScore":57,"minScore":19,"description":"Woman relate measure husband. Worry particular mention white sit manage.\nSix several reality little age. Create opportunity third middle wind sell special.","estimatedTime":"10 weeks","previewFileId":"e226d857-0ee5-4660-b24a-63fff2c1a30f","createdByUserId":"e658708c-34b7-4132-9f1b-14686267fb09"}'

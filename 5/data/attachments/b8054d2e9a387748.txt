@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/fa81c9de-e16c-44e6-83d9-b99c36dee886' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA4OjA5OjE0Ljg2NDUwNCIsInVzZXJfaWQiOiJjOGZlZjRiYi03NmFhLTRkZGUtYmUxNi1iMmY0MTMxM2IwMGQifQ.d5YWtKzrCr6zjcPCmlOLgW7O3GePoQSR95D6S4VSahk' \
+  -H 'content-length: 311' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Than public claim leave central consumer fast.","maxScore":88,"minScore":9,"orderIndex":38,"description":"Course worker interesting. Course example policy western none capital.\nMedia decade her civil write. Theory rise man or.\nImpact against ready financial risk citizen.","estimatedTime":"2 weeks"}'

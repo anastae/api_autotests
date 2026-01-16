@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA4OjA5OjE2LjY2NDkwMSIsInVzZXJfaWQiOiI0MDc0ZmFhYS0wNTRkLTQwYmEtYjBhOS03Y2EwZjYxNTEyNDcifQ.SAhaBMn5JsP1R-pMPPox19773_ExKFEjX3MFiDm2OQM' \
+  -H 'content-length: 332' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Drive team direction.","maxScore":100,"minScore":24,"description":"Work business hard fill teach instead way. Test range science debate official fall rock about. What southern break.","estimatedTime":"1 weeks","previewFileId":"547a4d19-5aea-435a-b517-98d8912c4e5e","createdByUserId":"4074faaa-054d-40ba-b0a9-7ca0f6151247"}'
