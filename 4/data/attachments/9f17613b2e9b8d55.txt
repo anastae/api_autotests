@@ -1,0 +1,18 @@
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     BASE_ASSERTIONS:base.py:14 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:38 Check create course response
+INFO     BASE_ASSERTIONS:base.py:30 Check that "title" equals to Fund fear especially.
+INFO     BASE_ASSERTIONS:base.py:30 Check that "max_score" equals to 62
+INFO     BASE_ASSERTIONS:base.py:30 Check that "min_score" equals to 24
+INFO     BASE_ASSERTIONS:base.py:30 Check that "description" equals to Claim various ability claim natural. Him agency him process nice evening check next. Kid practice perform thank practice west reveal.
+INFO     BASE_ASSERTIONS:base.py:30 Check that "estimated_time" equals to 4 weeks
+INFO     BASE_ASSERTIONS:base.py:30 Check that "preview_file_id" equals to eebe1c9e-cddd-4a85-b3ca-09fa5ec95583
+INFO     BASE_ASSERTIONS:base.py:30 Check that "created_by_user_id" equals to 1cbb4206-159b-438b-8575-6060934d7def
+INFO     SCHEMA_ASSERTIONS:schema.py:20 Validating JSON schema

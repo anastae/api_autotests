@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/ef3bd375-7d2a-44c1-a2a2-485f692566b9' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA3OjUwOjI4LjU1OTAyMSIsInVzZXJfaWQiOiI4NzBkNGVhYS1kYzBhLTRiYTEtYmNkZS0wYTBjZTdmMjEwYmIifQ.oHNB4aG-7XqtDK5NLGyxslgIZinX3DABsaddu9RmRwk' \
+  -H 'content-length: 202' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Most three woman.","maxScore":73,"minScore":8,"description":"Will economy consumer choose. Effect nor modern upon thank film music ability. Two worker design group.","estimatedTime":"6 weeks"}'

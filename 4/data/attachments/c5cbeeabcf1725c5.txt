@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA3OjUwOjI5LjE2NDQ3NCIsInVzZXJfaWQiOiI4NjJhYWZkZi1mODViLTRlYjQtYmUyMS1hMGMyYzgwZTBkZjUifQ._Xdlmoy1cGqEouDSibYMc9W0ZQPKR-2QhkRyxNtpWqU' \
+  -H 'content-length: 386' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Seat record music reduce artist purpose middle probably.","courseId":"1e73fd98-0894-4d7b-94ea-7d172e5122e7","maxScore":72,"minScore":10,"orderIndex":13,"description":"Buy both figure carry five. Prevent writer discussion guess different me.\nTelevision throw apply likely myself million. Picture expect time today. Which produce bad whether modern.","estimatedTime":"9 weeks"}'

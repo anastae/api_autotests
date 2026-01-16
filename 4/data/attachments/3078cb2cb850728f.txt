@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/f68c5449-5e43-44a6-a118-d6ecee8ba81c' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA3OjUwOjI5Ljc3MjU2MyIsInVzZXJfaWQiOiIwZmQ1ZDQ3ZS1mMjAzLTQ5YmMtYmI0Ni1iMTQ4Zjc4YzIyMWEifQ.ZlrFT4fR_II_H35riX4ngov9irtCJZ57yN_A5i5J5S0' \
+  -H 'content-length: 317' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Gas memory three film film local item.","maxScore":54,"minScore":14,"orderIndex":71,"description":"Down hospital religious. Not treatment begin since present probably. Develop fast relationship technology no note put concern.\nCold rest source though. Officer stage a production.","estimatedTime":"9 weeks"}'

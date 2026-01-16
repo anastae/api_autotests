@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA3OjUwOjMwLjM3NzQ3MiIsInVzZXJfaWQiOiJjNzdlYzc5ZS0wMmE0LTQwZWEtYWViYS01ZGZjNTA2NDYxMzAifQ.s7Yk5ZW0ZTudAZs4Xy7XtXRRY6RsDhKeiF0EU-s9ewI' \
+  -H 'content-length: 403' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Market drive kid paper against leg under would.","maxScore":80,"minScore":2,"description":"Guess least trip member. Herself manager manager term soldier.\nLive growth floor form rise mention campaign industry. Various expert bit rise head call military.","estimatedTime":"1 weeks","previewFileId":"bc68f0d2-d038-4dd5-bc7e-3cae04609c82","createdByUserId":"c77ec79e-02a4-40ea-aeba-5dfc50646130"}'

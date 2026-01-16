@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA3OjUwOjI5Ljc3MjU2MyIsInVzZXJfaWQiOiIwZmQ1ZDQ3ZS1mMjAzLTQ5YmMtYmI0Ni1iMTQ4Zjc4YzIyMWEifQ.ZlrFT4fR_II_H35riX4ngov9irtCJZ57yN_A5i5J5S0' \
+  -H 'content-length: 340' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Fight reduce her meet allow pay admit.","maxScore":51,"minScore":9,"description":"House often drug hot. Wonder arm government perhaps see agent. Community attack school. Democrat some maybe.","estimatedTime":"7 weeks","previewFileId":"61fdab4d-f59b-4715-9357-71b273fdb00f","createdByUserId":"0fd5d47e-f203-49bc-bb46-b148f78c221a"}'

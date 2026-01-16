@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA3OjUwOjI5LjE2NDQ3NCIsInVzZXJfaWQiOiI4NjJhYWZkZi1mODViLTRlYjQtYmUyMS1hMGMyYzgwZTBkZjUifQ._Xdlmoy1cGqEouDSibYMc9W0ZQPKR-2QhkRyxNtpWqU' \
+  -H 'content-length: 320' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Lay I position law until.","maxScore":76,"minScore":14,"description":"A street his everyone since budget. Body million beyond party. Smile local prevent country game lay.","estimatedTime":"9 weeks","previewFileId":"6d3752dd-96c1-4499-80be-81f32bc98189","createdByUserId":"862aafdf-f85b-4eb4-be21-a0c2c80e0df5"}'

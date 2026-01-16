@@ -1,0 +1,21 @@
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/exercises
+INFO     BASE_ASSERTIONS:base.py:14 Check that response status code equals to 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:37 Assert create exercise response
+INFO     BASE_ASSERTIONS:base.py:30 Check that "title" equals to Seat record music reduce artist purpose middle probably.
+INFO     BASE_ASSERTIONS:base.py:30 Check that "course_id" equals to 1e73fd98-0894-4d7b-94ea-7d172e5122e7
+INFO     BASE_ASSERTIONS:base.py:30 Check that "max_score" equals to 72
+INFO     BASE_ASSERTIONS:base.py:30 Check that "min_score" equals to 10
+INFO     BASE_ASSERTIONS:base.py:30 Check that "order_index" equals to 13
+INFO     BASE_ASSERTIONS:base.py:30 Check that "description" equals to Buy both figure carry five. Prevent writer discussion guess different me.
+Television throw apply likely myself million. Picture expect time today. Which produce bad whether modern.
+INFO     BASE_ASSERTIONS:base.py:30 Check that "estimated_time" equals to 9 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:20 Validating JSON schema

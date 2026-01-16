@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA3OjUwOjMxLjA1NzQ3NSIsInVzZXJfaWQiOiI3ZjVkZmFjNS02Y2ZiLTRlY2MtYWMxYy1hNzVlZmQxNmI1MWIifQ.s2Myfr5N3v9TSueAIjENEDIj_EK4uXoNPnH5cmNqB14' \
+  -H 'content-length: 382' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Growth step since Democrat within.","maxScore":88,"minScore":5,"description":"Executive Congress nothing from defense unit surface. Realize low series.\nHimself very will economy. Believe action service adult dream tax cut pressure.","estimatedTime":"5 weeks","previewFileId":"e8fb5d4f-19a1-40d2-9a28-91ea1ac775ae","createdByUserId":"7f5dfac5-6cfb-4ecc-ac1c-a75efd16b51b"}'

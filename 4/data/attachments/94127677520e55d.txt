@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA3OjUwOjI4LjU1OTAyMSIsInVzZXJfaWQiOiI4NzBkNGVhYS1kYzBhLTRiYTEtYmNkZS0wYTBjZTdmMjEwYmIifQ.oHNB4aG-7XqtDK5NLGyxslgIZinX3DABsaddu9RmRwk' \
+  -H 'content-length: 302' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Kitchen buy three environment.","maxScore":85,"minScore":9,"description":"Whether share central cause home husband energy. Health let table three enter.","estimatedTime":"2 weeks","previewFileId":"f3f5affc-1cc1-4e20-a255-e6ce0de94d26","createdByUserId":"870d4eaa-dc0a-4ba1-bcde-0a0ce7f210bb"}'

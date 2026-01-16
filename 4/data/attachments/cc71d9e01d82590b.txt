@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAxLTE2VDA3OjUwOjMwLjM3NzQ3MiIsInVzZXJfaWQiOiJjNzdlYzc5ZS0wMmE0LTQwZWEtYWViYS01ZGZjNTA2NDYxMzAifQ.s7Yk5ZW0ZTudAZs4Xy7XtXRRY6RsDhKeiF0EU-s9ewI' \
+  -H 'content-length: 306' \
+  -H 'content-type: application/json' \
+  -d '{"title":"She but price partner interesting.","courseId":"ecab4e58-d607-44d6-88de-09d329890670","maxScore":78,"minScore":5,"orderIndex":57,"description":"Fill Mrs head every. Each south marriage my letter. Entire save during join out.\nIts thought teach commercial herself onto.","estimatedTime":"9 weeks"}'

@@ -1,0 +1,11 @@
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:29 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:29 Make GET request to http://localhost:8000/api/v1/files/3a58fa56-10f9-446d-9459-9b7367723f52
+INFO     HTTP_CLIENT:event_hooks.py:39 Got response 200 OK from http://localhost:8000/api/v1/files/3a58fa56-10f9-446d-9459-9b7367723f52
+INFO     BASE_ASSERTIONS:base.py:14 Check that response status code equals to 200
+INFO     FILES_ASSERTIONS:files.py:65 Check get file response
+INFO     BASE_ASSERTIONS:base.py:30 Check that "file" equals to id='3a58fa56-10f9-446d-9459-9b7367723f52' url=HttpUrl('http://localhost:8000/static/tests/914c4221-7938-40a1-b7d2-67d8022e8fcd.png') filename='914c4221-7938-40a1-b7d2-67d8022e8fcd.png' directory='tests'
